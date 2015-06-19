@@ -19,6 +19,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+    @list.items.build
   end
 
   # POST /lists
