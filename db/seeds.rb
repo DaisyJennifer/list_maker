@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+List.create({"name"=>"Monday"})
+List.create({"name"=>"Tuesday"})
+List.create({"name"=>"Wednesday"})
+List.create({"name"=>"Thursday"})
+List.create({"name"=>"Friday"})
+List.create({"name"=>"Saturday"})
+List.create({"name"=>"Sunday"})
+
+# Items.create(description, due_date, list_id, completed )
+
+Item.create("description"=>"Grocery shop", "due_date"=>)
