@@ -1,11 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 
 
 monday = List.create!({"name"=>"Monday"})
@@ -16,7 +11,7 @@ friday = List.create!({"name"=>"Friday"})
 saturday = List.create!({"name"=>"Saturday"})
 sunday = List.create!({"name"=>"Sunday"})
 
-# Items.create(description, due_date, list_id, completed )
+
 
 Item.create!("description"=>"Grocery shop", "due_date"=>"06/01/2015", "list_id"=> monday.id , "completed"=> false  ,
 "order_number"=> 1)
