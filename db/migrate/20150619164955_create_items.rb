@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration
       t.date :due_date
       t.integer :order
       t.integer :list_id
+      t.boolean :completed
 
       t.timestamps null: false
     end

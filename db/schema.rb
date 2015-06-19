@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150619164955) do
     t.date     "due_date"
     t.integer  "order"
     t.integer  "list_id"
+    t.boolean  "completed"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
