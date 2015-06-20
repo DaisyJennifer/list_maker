@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <h3><%= @list.name %><br></h3>
-  </div>
-
   <%= f.fields_for(:items) do |ff| %>
     <div class="field">
       <%= ff.label :description, "To Do Item" %><br>

@@ -10,6 +10,8 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @items = @list.items
+    @item = Item.new(list_id: @list.id)
   end
 
   # GET /lists/new
