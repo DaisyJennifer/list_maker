@@ -1,69 +1,103 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #9BDFDD;
+  color: #00B2A7;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+.header {
+  font-size: 40px;
+  line-height: 22px;
+  font-family: sans-serif;
+  color: #00B2A7;
+  text-align: center;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+.list-group {
+ font-style: italic;
+ font-weight: bolder;
+ text-align: left;
+ line-height: 22px;
+ font-size: 25px;
 }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666;
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
   }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+  
+.btn-btn-primary {
+
 }
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
 
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
-}
+// p, ol, ul, td {
+//   font-family: verdana, arial, helvetica, sans-serif;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+//
+// pre {
+//   background-color: #eee;
+//   padding: 10px;
+//   font-size: 11px;
+// }
+//
+// a {
+//   color: #000;
+//   &:visited {
+//     color: #666;
+//   }
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
+//
+// div {
+//   &.field, &.actions {
+//     margin-bottom: 10px;
+//   }
+// }
+//
+// #notice {
+//   color: green;
+// }
+//
+// .field_with_errors {
+//   padding: 2px;
+//   background-color: red;
+//   display: table;
+// }
+//
+// #error_explanation {
+//   width: 450px;
+//   border: 2px solid red;
+//   padding: 7px;
+//   padding-bottom: 0;
+//   margin-bottom: 20px;
+//   background-color: #f0f0f0;
+//   h2 {
+//     text-align: left;
+//     font-weight: bold;
+//     padding: 5px 5px 5px 15px;
+//     font-size: 12px;
+//     margin: -7px;
+//     margin-bottom: 0px;
+//     background-color: #c00;
+//     color: #fff;
+//   }
+//   ul li {
+//     font-size: 12px;
+//     list-style: square;
+//   }
+// }
