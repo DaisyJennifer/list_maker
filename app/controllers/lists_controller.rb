@@ -10,6 +10,8 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @items = @list.items
+    @item = Item.new(list_id: @list.id)
   end
 
   # GET /lists/new
@@ -77,4 +79,11 @@ class ListsController < ApplicationController
 #     def list_params
 #       params.require(:list).permit(:name)
 #     end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def list_params
+      params.require(:list).permit(:name,
+          items_attributes: [:id, :description, :due_date, :order, :list_id, :completed, :_destroy])
+    end
+
 end

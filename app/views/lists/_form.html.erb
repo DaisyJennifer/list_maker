@@ -13,11 +13,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.fields_for(:items) do |ff| %>
+    <div class="field">
+      <%= ff.label :description, "To Do Item" %><br>
+      <%= ff.text_area :description %>
+    </div>
+    <div class="field">
+      <%= ff.label :due_date %><br>
+      <%= ff.date_select :due_date %>
+    </div>
+    <div class="field">
+      <%= ff.label :order %><br>
+      <%= ff.number_field :order %>
+    </div>
+    <div class="question-type">
+      <%= ff.label :completed %>
+      <%= ff.check_box(:completed) %>
+    </div>
+  <% end%>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
