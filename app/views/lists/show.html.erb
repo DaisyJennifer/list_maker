@@ -6,7 +6,7 @@
 
 <p>To Do</p>
 <div id="all-items-container">
-  <%= render partial: @items%>
+  <%= render partial: @items, locals: { list_id: @list.id }%>
 </div>
 
 <div id="new-item-container">
