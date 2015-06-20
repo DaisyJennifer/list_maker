@@ -14,27 +14,27 @@ sunday = List.create!({"name"=>"Sunday"})
 
 
 Item.create!("description"=>"Grocery shop", "due_date"=>"06/01/2015", "list_id"=> monday.id , "completed"=> false  ,
-"order_number"=> 1)
+"order"=> 1)
 Item.create!("description"=>"Laundry", "due_date"=>"06/02/2015", "list_id"=> monday.id , "completed"=> false  ,
-"order_number"=> 2)
+"order"=> 2)
 Item.create!("description"=>"Go to Post Office", "due_date"=>"06/03/2015", "list_id"=> monday.id , "completed"=> false ,
-"order_number"=> 3)
+"order"=> 3)
 Item.create!("description"=>"Dentist appointment", "due_date"=>"06/04/2015", "list_id"=> monday.id , "completed"=> false  ,
-"order_number"=> 4)
+"order"=> 4)
 Item.create!("description"=>"Make dinner reservations", "due_date"=>"06/05/2015", "list_id"=> monday.id , "completed"=> false  ,
-"order_number"=> 5)
+"order"=> 5)
 Item.create!("description"=>"Volunteer at school", "due_date"=>"06/06/2015", "list_id"=> monday.id , "completed"=> false ,
-"order_number"=> 6)
+"order"=> 6)
 
 
 Item.create!("description"=>"Paint bedroom", "due_date"=>"06/06/2015", "list_id"=> tuesday.id , "completed"=> false ,
-"order_number"=> 7)
+"order"=> 7)
 
 Item.create!("description"=>"Clean garage", "due_date"=>"06/06/2015", "list_id"=> tuesday.id , "completed"=> false ,
-"order_number"=> 8)
+"order"=> 8)
 
 Item.create!("description"=>"Dinner with friends", "due_date"=>"06/06/2015", "list_id"=> tuesday.id , "completed"=> false  ,
-"order_number"=> 9)
+"order"=> 9)
 
 Item.create!("description"=>"Project deadline", "due_date"=>"06/06/2015", "list_id"=> tuesday.id , "completed"=> false  ,
-"order_number"=> 10)
+"order"=> 10)
