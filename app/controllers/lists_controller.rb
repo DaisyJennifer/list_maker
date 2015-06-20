@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  # before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -27,8 +27,9 @@ class ListsController < ApplicationController
   # POST /lists
   # POST /lists.json
   def create
-    @list_name = List.create!("name" => params[:list][:name])
-    redirect_to lists_path
+    @list = List.create!(list_params)
+    # @list_name = List.create!("name" => params[:list][:name])
+    # redirect_to lists_path
   end
 
 
@@ -61,24 +62,24 @@ class ListsController < ApplicationController
 # #
 #   # DELETE /lists/1
 #   # DELETE /lists/1.json
-  # def destroy
-  #   @list.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
+  def destroy
+    @list.destroy
+    respond_to do |format|
+      format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 #
-#   private
-#     # Use callbacks to share common setup or constraints between actions.
-#     def set_list
-#       @list = List.find(params[:id])
-#     end
-#
-#     # Never trust parameters from the scary internet, only allow the white list through.
-#     def list_params
-#       params.require(:list).permit(:name)
-#     end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_list
+      @list = List.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def list_params
+      params.require(:list).permit(:name)
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
