@@ -24,7 +24,11 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.create!(item_params, list_id: @list.id)
+
+    @item = Item.new(item_params)
+    @item.list_id = @list.id
+    @item.save
+
 
 
   end
