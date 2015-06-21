@@ -1,9 +1,7 @@
-<div id="each-item-box">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3"><%= item.order %></div>
-    <div class="col-xs-6 col-sm-3"><%= item.description %></div>
-    <div class="col-xs-6 col-sm-3"><%= item.due_date %></div>
-    <div class="col-xs-6 col-sm-3"><%= label_tag :completed %>
-    <%= check_box_tag(:completed) %></div>
-  </div>
-</div>
+<li id="each-item-box">
+  <%= item.order %>
+  <%= item.description %>
+  <%= item.due_date %>
+  <%= label_tag :completed %>
+  <%= check_box_tag(:completed) %>
+</li>

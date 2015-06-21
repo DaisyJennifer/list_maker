@@ -17,5 +17,5 @@
 //= require_tree .
 
 $(function(){
-  $("").sortable()
+  $("#all-items-container").sortable()
 });
