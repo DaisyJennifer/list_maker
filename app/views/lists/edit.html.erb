@@ -1,6 +1,17 @@
-<h1><%= @list.name %></h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form' %>
+<p>
+  <strong><%= @list.name %></strong>
+</p>
 
-<%= link_to 'Show', @list %> |
-<%= link_to 'Back', lists_path %>
+<p>To Do</p>
+  <div id="all-items-container">
+    <%= render @items %>
+  </div>
+
+<div id="new-item-container">
+</div>
+
+<%= link_to "New Task", new_item_path(list_id: @list.id), remote: true %>
+
+<%= link_to 'Back', root_path %>
