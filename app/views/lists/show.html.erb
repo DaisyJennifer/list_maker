@@ -5,12 +5,13 @@
 </p>
 
 <p>To Do</p>
-<div id="all-items-container">
-  <%= render partial: @items, locals: { list_id: @list.id }%>
-</div>
+  <div id="all-items-container">
+    <%= render @items %>
+  </div>
 
 <div id="new-item-container">
-  <%= link_to "New Task", new_item_path, remote: true %>
 <div>
+
+<%= link_to "New Task", new_item_path(list_id: @list.id), remote: true %>
 
 <%= link_to 'Back', root_path %>

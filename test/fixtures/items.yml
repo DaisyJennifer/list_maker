@@ -9,19 +9,19 @@ one:
 two:
   description: Sweep Kitchen
   due_date: 2015-06-19
-  order: 1
+  order: 2
   list_id: 1
 
 three:
   description: Laundry
   due_date: Date.now
-  order: 1
+  order: 3
   list_id: 1
 
 four:
   description: Dishes
   due_date: Date.now
-  order: 1
+  order: 4
   list_id: 1
 
 fifth:
@@ -33,5 +33,5 @@ fifth:
 sixth:
   description: Party
   due_date: 2015-06-19
-  order: 1
+  order: 2
   list_id: 2
