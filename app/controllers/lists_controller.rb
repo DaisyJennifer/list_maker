@@ -21,7 +21,9 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
-    @list.items.build
+    @items = @list.items
+    @item = Item.new(list_id: @list.id)
+    # @list.items.build
   end
 
   # POST /lists
