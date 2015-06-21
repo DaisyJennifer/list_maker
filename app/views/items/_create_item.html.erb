@@ -8,11 +8,10 @@
     <%= f.date_select :due_date %>
   </div>
   <div class="field">
-    <%= f.label :order %><br>
-    <%= f.number_field :order %>
+    <%= f.hidden_field :order %><br>
   </div>
   <div class="field">
-    <%= f.hidden_field :list_id %><br>
+    <%= f.hidden_field :list_id%><br>
   </div>
   <div class="actions">
     <%= f.submit %>

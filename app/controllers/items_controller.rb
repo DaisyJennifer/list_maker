@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = Item.new(list_id: params[:list_id], order: Item.assign_order)
   end
 
   # GET /items/1/edit
@@ -24,13 +24,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-
-    @item = Item.new(item_params)
-    @item.list_id = @list.id
-    @item.save
-
-
-
+    @item = Item.create!(item_params)
   end
 
   # PATCH/PUT /items/1

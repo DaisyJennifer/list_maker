@@ -11,18 +11,17 @@ class ItemsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:items)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create item" do
-    assert_difference('Item.count') do
-      post :create, item: { description: @item.description, due_date: @item.due_date, list_id: @item.list_id, order: @item.order }
-    end
-
-    assert_redirected_to item_path(assigns(:item))
-  end
+  # test "should get new" do
+  #   get :new
+  #   assert_response :success
+  # end
+  #
+  # test "should create item" do
+  #   assert_difference('Item.count') do
+  #     post :create, item: { description: @item.description, due_date: @item.due_date, list_id: @item.list_id, order: @item.order }
+  #   end
+  #
+  # end
 
   test "should show item" do
     get :show, id: @item
