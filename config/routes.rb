@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :items
+  resources :items do
+    post :sort, on: :collection
+  end
+
   resources :lists
   root 'lists#index'
 

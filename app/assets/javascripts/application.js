@@ -16,6 +16,17 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
 $(function(){
-  $("#all-items-container").sortable()
+  $("#items").sortable({
+    axis: 'y',
+    items: "li",
+    update: function(){
+      $.ajax({
+        url: "/items/sort",
+        type: 'post',
+        data: $("#items").sortable('serialize')
+      })
+    }
+  });
 });

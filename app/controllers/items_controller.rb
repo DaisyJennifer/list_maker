@@ -1,6 +1,16 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  def sort
+    @items = Item.all
+    @items.each do |item|
+      item.order = params['item'].index(item.id.to_s) + 1
+      item.save
+    end
+    render :nothing => true
+  end
+
+
   # GET /items
   # GET /items.json
   def index
