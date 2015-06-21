@@ -7,7 +7,8 @@
     <%= render @items %>
   </div>
 
-  <br>
+  <div id="new-item-container">
+  </div>
 
-  <%= link_to 'New Item', new_item_path %>
+  <%= link_to 'New Item', new_item_path, remote: true%>
 </div>
