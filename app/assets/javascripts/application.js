@@ -18,14 +18,15 @@
 
 
 $(function(){
-  $("#all-items-container").sortable({
+  $("#items").sortable({
     axis: 'y',
-    update: function(event, ui){
+    items: "li",
+    update: function(){
       $.ajax({
         url: "/items/sort",
         type: 'post',
-        data: $("#all-items-container").sortable('serialize')
+        data: $("#items").sortable('serialize')
       })
     }
-  })
+  });
 });

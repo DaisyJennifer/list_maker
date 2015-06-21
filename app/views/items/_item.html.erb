@@ -1,7 +1,7 @@
-<div class="row" id="each-item-box" data-id="<%= item.id %>" data-pos="<%= item.order %>">
+<li class="row" id="item_<%= item.id %>">
   <div class="col-xs-6 col-sm-3"><%= item.description %></div>
   <div class="col-xs-6 col-sm-3"><%= item.due_date %></div>
   <div class="col-xs-6 col-sm-3"><%= label_tag :completed %>
     <%= check_box_tag(:completed) %></div>
     <div class="col-xs-6 col-sm-3"><button type="button" class="btn btn-primary"><%= link_to 'X', item, method: :delete %></button></div>
-</div>
+</li>
