@@ -19,13 +19,13 @@ class ItemsController < ApplicationController
 
   # GET /items/1
   # GET /items/1.json
-  def show
-    @items = Item.all(:order => "order")
-  end
+  # def show
+  #   @items = Item.all(:order => "order")
+  # end
 
   # GET /items/new
   def new
-    @item = Item.new(list_id: params[:list_id])
+    @item = Item.new(list_id: params[:list_id]) 
   end
 
   # GET /items/1/edit
@@ -38,12 +38,12 @@ class ItemsController < ApplicationController
     @item = Item.create!(item_params)
   end
 
-  def sort
-    params[:items].each_with_index do |id, index|
-      Item.update.all(["order = ?", index+1], ['id = ?', id])
-    end
-    render :nothing=> true
-  end
+  # def sort
+  #   params[:items].each_with_index do |id, index|
+  #     Item.update.all(["order = ?", index+1], ['id = ?', id])
+  #   end
+  #   render :nothing=> true
+  # end
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
