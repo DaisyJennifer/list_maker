@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
-<div class="header"><h1>Your To-do Lists</h1></div>
 <div class="page">
+  <div class="header"><h1>Your To-do Lists</h1></div>
   <div class="list-box">
     <ul id="lists">
       <%= render @lists %>
     </ul>
   </div>
-</div>
 
-<div id="new-form-container">
-</div>
+  <div id="new-form-container">
+  </div>
 
-<%= link_to 'New List', new_list_path, remote: true%>
+  <%= link_to 'New List', new_list_path, remote: true%>
+</div>
