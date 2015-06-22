@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new(list_id: params[:list_id], order: Item.assign_order)
+    @item = Item.new(list_id: params[:list_id])
   end
 
   # GET /items/1/edit

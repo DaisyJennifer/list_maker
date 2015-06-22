@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
-
 <div class="header"><h1>Your To-do Lists</h1></div>
-
-<div class="list-box">
-    <div id="list-container">
+<div class="page">
+  <div class="list-box">
+    <ul id="lists">
       <%= render @lists %>
-    </div>
+    </ul>
+  </div>
 </div>
 
 <div id="new-form-container">

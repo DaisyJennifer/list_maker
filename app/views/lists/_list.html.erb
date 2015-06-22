@@ -1,12 +1,7 @@
 
-<ul class="list-group">
-<div><li class="list-group-item"><%= list.name %>
-<div class="btn-group">
-  <button type="button" class="btn btn-primary"><%= link_to 'Show', list %></button>
-  <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_list_path(list) %></button>
-    <button type="button" class="btn btn-primary"><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li></button>
-      <br>
-</div>
-</div>
-</ul>
+<li class="row" id="list">
+  <div class="col-md-11"><%= link_to "#{list.name}", list_path(list) %></div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default"><%= link_to 'X', list, method: :delete %></button>
+  </div>
+</li>
