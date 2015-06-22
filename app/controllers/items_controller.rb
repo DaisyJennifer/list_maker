@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @items = Item.all(:order => "order")
   end
 
   # GET /items/new
@@ -35,6 +36,13 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.create!(item_params)
+  end
+
+  def sort
+    params[:items].each_with_index do |id, index|
+      Item.update.all(["order = ?", index+1], ['id = ?', id])
+    end
+    render :nothing=> true
   end
 
   # PATCH/PUT /items/1
