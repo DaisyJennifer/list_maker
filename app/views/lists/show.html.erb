@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="page">
+  <p>
+    <strong><%= @list.name %></strong>
+  </p>
 
-<p>
-  <strong><%= @list.name %></strong>
-</p>
-
-<p>To Do</p>
+  <p>To Do</p>
   <ul id="items">
     <%= render @items %>
   </ul>
 
-<div id="new-item-container">
+  <div id="new-item-container">
+  </div>
+
+  <div><%= link_to "New Task", new_item_path(list_id: @list.id), remote: true %></div>
+  <div><%= link_to 'Back', root_path %></div>
 </div>
-
-<%= link_to "New Task", new_item_path(list_id: @list.id), remote: true %>
-
-<%= link_to 'Back', root_path %>

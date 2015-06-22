@@ -20,7 +20,7 @@
    border: 1px solid black;
    padding: 4px;
    color: green;
-   text-align: center;
+   text-align: left;
    display: block;
    margin: auto;
    width: auto;
@@ -30,3 +30,7 @@
    width: 90%;
    margin: auto;
  }
+
+.btn-group{
+  right: 0;
+}
