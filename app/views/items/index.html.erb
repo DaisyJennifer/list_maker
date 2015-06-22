@@ -1,0 +1,14 @@
+<div class="page">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Items</h1>
+
+  <ul id="items" >
+    <%= render @items %>
+  </ul>
+
+  <div id="new-item-container">
+  </div>
+
+  <%= link_to 'New Item', new_item_path, remote: true%>
+</div>

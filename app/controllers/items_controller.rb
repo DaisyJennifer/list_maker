@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new(list_id: params[:list_id]) 
+    @item = Item.new(list_id: params[:list_id])
   end
 
   # GET /items/1/edit
@@ -64,8 +64,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
-      format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to :back, notice: 'Item was successfully destroyed.' }
     end
   end
 
